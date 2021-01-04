@@ -6,14 +6,14 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="414.0" prefWidth="452.0" style="-fx-background-color: #58D4FF#58D4FF;" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="414.0" prefWidth="452.0" style="-fx-background-color: #58D4FF#58D4FF;" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignupController">
    <children>
-      <JFXTextField layoutX="154.0" layoutY="64.0" promptText="Username" />
-      <JFXPasswordField layoutX="154.0" layoutY="97.0" promptText="Password" />
-      <JFXRadioButton layoutX="146.0" layoutY="147.0" text="Male" />
-      <JFXRadioButton layoutX="226.0" layoutY="147.0" text="Female" />
-      <JFXTextField layoutX="154.0" layoutY="180.0" promptText="Location" />
-      <JFXButton layoutX="126.0" layoutY="228.0" prefHeight="27.0" prefWidth="201.0" style="-fx-background-color: #ffffff;" text="Sign Up" />
-      <JFXButton layoutX="327.0" layoutY="20.0" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #ffffff;" text="Login" />
+      <JFXTextField fx:id="username" layoutX="154.0" layoutY="64.0" promptText="Username" />
+      <JFXPasswordField fx:id="password" layoutX="154.0" layoutY="97.0" promptText="Password" />
+      <JFXRadioButton fx:id="male" layoutX="146.0" layoutY="147.0" text="Male" />
+      <JFXRadioButton fx:id="female" layoutX="226.0" layoutY="147.0" text="Female" />
+      <JFXTextField fx:id="location" layoutX="154.0" layoutY="180.0" promptText="Location" />
+      <JFXButton fx:id="signup" layoutX="126.0" layoutY="228.0" onAction="#signUP" prefHeight="27.0" prefWidth="201.0" style="-fx-background-color: #ffffff;" text="Sign Up" />
+      <JFXButton fx:id="login" layoutX="327.0" layoutY="20.0" onAction="#loginAction" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #ffffff;" text="Login" />
    </children>
 </AnchorPane>
