@@ -7,17 +7,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="348.0" prefWidth="459.0" style="-fx-background-color: #58D4FF#58D4FF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="anchorpane" prefHeight="348.0" prefWidth="459.0" style="-fx-background-color: #58D4FF#58D4FF;" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
    <children>
-      <JFXTextField focusColor="#09094d" layoutX="111.0" layoutY="98.0" prefHeight="27.0" prefWidth="221.0" promptText="Username" />
-      <JFXPasswordField layoutX="111.0" layoutY="138.0" prefHeight="27.0" prefWidth="221.0" promptText="Password" />
-      <JFXButton layoutX="359.0" layoutY="21.0" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #ffffff; -fx-border-color: #a0a2ab;" text="Sign Up" textFill="GREY" />
-      <JFXCheckBox layoutX="111.0" layoutY="195.0" text="Remember me" textFill="WHITE">
+      <JFXTextField fx:id="username" focusColor="#09094d" layoutX="111.0" layoutY="98.0" prefHeight="27.0" prefWidth="221.0" promptText="Username" />
+      <JFXPasswordField fx:id="password" layoutX="111.0" layoutY="138.0" prefHeight="27.0" prefWidth="221.0" promptText="Password" />
+      <JFXButton fx:id="signup" layoutX="359.0" layoutY="21.0" onAction="#signUp" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #ffffff; -fx-border-color: #a0a2ab;" text="Sign Up" textFill="GREY" />
+      <JFXCheckBox fx:id="checkbox" layoutX="111.0" layoutY="195.0" text="Remember me" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXButton layoutX="260.0" layoutY="185.0" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #FFFFFF#FFFFFF;" text="Login" textFill="GREY" />
-      <JFXButton layoutX="160.0" layoutY="244.0" style="-fx-background-color: #58D4FF#58A4FF;" text="Forgot Your Password" />
+      <JFXButton fx:id="login" layoutX="260.0" layoutY="185.0" onAction="#loginAction" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #FFFFFF#FFFFFF;" text="Login" textFill="GREY" />
+      <JFXButton fx:id="forgot" layoutX="160.0" layoutY="244.0" style="-fx-background-color: #58D4FF#58A4FF;" text="Forgot Your Password" />
    </children>
 </AnchorPane>
