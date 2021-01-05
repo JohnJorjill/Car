@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="holderPane" prefHeight="447.0" prefWidth="638.0" style="-fx-background-color: #DEDEDE#DEDEDE;" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomePageController">
+   <children>
+      <Label layoutX="39.0" layoutY="105.0" text="Dashboard">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="36.0" layoutY="159.0" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #58D4FF#58D4FF;" text="HOME" />
+      <JFXButton layoutX="36.0" layoutY="216.0" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #58D4FF#58D4FF;" text="MY CARS" />
+      <JFXButton layoutX="35.0" layoutY="272.0" prefHeight="33.0" prefWidth="107.0" style="-fx-background-color: #58D4FF#58D4FF;" text="ABOUT" />
+      <Label layoutX="154.0" layoutY="224.0" prefHeight="17.0" prefWidth="15.0" style="-fx-background-color: #58D4FF#58D4FF;" text="0" />
+      <AnchorPane fx:id="holderPane" layoutX="203.0" layoutY="62.0" prefHeight="323.0" prefWidth="394.0" />
+      <ImageView fitHeight="69.0" fitWidth="122.0" layoutX="43.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/578e9e4588e4a77c708b8db1.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="347.0" prefWidth="408.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton contentDisplay="TOP" layoutX="14.0" layoutY="20.0" prefHeight="140.0" prefWidth="179.0" style="-fx-background-color: #009BFF#009BFF;" text="Toyota" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="121.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/Users/zayukha/Downloads/216702_New_Volvo_XC40_-_exterior_640x420.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="204.0" layoutY="20.0" prefHeight="140.0" prefWidth="179.0" style="-fx-background-color: #009BFF#009BFF;" text="Ford" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="102.0" fitWidth="153.0" pickOnBounds="true">
+               <image>
+                  <Image url="file:/Users/zayukha/git/Car2/Resources/578e9e4588e4a77c708b8db1.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="14.0" layoutY="174.0" prefHeight="140.0" prefWidth="179.0" style="-fx-background-color: #009BFF#009BFF;" text="Audi" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="121.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/Users/zayukha/Downloads/2020-audi-rs7-112-1569274021.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="204.0" layoutY="174.0" prefHeight="140.0" prefWidth="179.0" style="-fx-background-color: #009BFF#009BFF;" text="Mercedes" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="105.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/Users/zayukha/Downloads/large-2479-s-classsaloon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
