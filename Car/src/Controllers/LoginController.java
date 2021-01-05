@@ -12,6 +12,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import DBConnection.DBHandler;
 import java.sql.Connection;
@@ -65,9 +67,22 @@ public class LoginController implements Initializable {
 			}
 			
 			if(count==1) {
-				System.out.println("Login Successful!");
+				login.getScene().getWindow().hide();
+				
+				Stage home = new Stage();
+				try {
+					Parent root = FXMLLoader.load(getClass().getResource("/FXML/HomePage.fxml"));
+					Scene scene = new Scene(root);
+					home.setScene(scene);
+					home.show();
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
 			}else {
-				System.out.println("Error: incorrect username/password");
+				Alert alert= new Alert(Alert.AlertType.ERROR);
+				alert.setHeaderText(null);
+				alert.setContentText("Username and Password not correct");
+				alert.show();
 			}
 			
 		} catch (SQLException e1) {
