@@ -13,6 +13,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import DBConnection.DBHandler;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class LoginController implements Initializable {
 	
@@ -33,16 +37,49 @@ public class LoginController implements Initializable {
 
     @FXML
     private JFXButton forgot;
+    
+    private DBHandler handler;
+    private Connection connection;
+    private java.sql.PreparedStatement pst;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
+		handler = new DBHandler();
 	}
 	
 	@FXML
 	public void loginAction(ActionEvent e) {
-		System.out.println("Login Successful!");
+		connection = handler.getConnection();
+		String q1 = "SELECT * from youtubers where names=? and password=?";
+		
+		try {
+			pst = connection.prepareStatement(q1);
+			pst.setString(1, username.getText());
+			pst.setString(2, password.getText());
+			ResultSet rs= pst.executeQuery();
+			
+			int count= 0;
+			
+			while(rs.next()){
+				count++;
+			}
+			
+			if(count==1) {
+				System.out.println("Login Successful!");
+			}else {
+				System.out.println("Error: incorrect username/password");
+			}
+			
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}finally {
+			try {
+				connection.close();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
+		
 	}
 	
 	@FXML
@@ -57,5 +94,4 @@ public class LoginController implements Initializable {
 		signup.setResizable(false);
 		
 	}
-
 }
