@@ -13,6 +13,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import DBConnection.DBHandler;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class SignupController implements Initializable {
 	
@@ -36,15 +40,39 @@ public class SignupController implements Initializable {
 
     @FXML
     private JFXButton login;
+    
+    private Connection connection;
+    private DBHandler handler;
+    private PreparedStatement pst;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		handler = new DBHandler();
 		
 	}
 	
 	@FXML
 	public void signUP(ActionEvent ae1) {
-		System.out.println("Registration is Successful!");
+		String insert = "INSERT INTO youtubers(names,password,gender,location)" + "VALUES(?,?,?,?)";
+		connection = handler.getConnection();
+		try {
+			pst = connection.prepareStatement(insert);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			pst.setString(1, username.getText());
+			pst.setString(2, password.getText());
+			pst.setString(3, getGender());
+			pst.setString(4, location.getText());
+			
+			pst.executeUpdate();
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		
+
 	}
 	
 	@FXML
@@ -57,6 +85,18 @@ public class SignupController implements Initializable {
 		login.setScene(scene);
 		login.show();
 		login.setResizable(false);
+	}
+	
+	public String getGender() {
+		String gen = "";
+		
+		if(male.isSelected()) {
+			gen = "Male";
+		}else if (female.isSelected()) {
+			gen = "female";
+		}
+		
+		return gen;
 	}
 
 }
